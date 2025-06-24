@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather</title>
+
+  <link rel="stylesheet" href="./css/all.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+  <nav class="container-fluid navbar-expand-lg bg-dark text-white py-4">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="logo">
+        <a class="navbar-brand d-flex align-items-center" href="#"><i class="fa-solid fa-cloud-bolt fa-3x p-2"></i>
+          <div class="d-flex flex-column align-items-star text">
+            <span class="fs-3 p-0 m-0">weather</span>
+
+            <span class="p-0 m-0">tagline goes here</span>
+          </div>
+        </a>
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Live Cameras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Photos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- search input -->
+  <div class="container bg-dark d-flex rounded-5 flex-row my-5 search p-1">
+    <input type="text" placeholder="Find your location ...."
+      class="text-white bg-dark p-2 w-100 border-0 bg-opacity-10" />
+    <button class="btn btn-info rounded-4 px-5 m-1" id="findBtn">
+      Find
+    </button>
+  </div>
+
+  <!-- weather body -->
+  <div class="container my-5">
+    <div class="row" id="rowData">
+
+      <div class="col-md-12 col-lg-4 bg-dark p-2">
+
+        <div class="header d-flex justify-content-between bg-black" id="">
+          <span>Saturday</span>
+          <span>21 June</span>
+        </div>
+        <div id="location">
+          <h5 class="my-3">Alexandria</h5>
+        </div>
+        <div class="d-flex flex-column justify-content-center" id="tempreture">
+          <h1 class="my-3">34</h1>
+          <span>sunny</span>
+          <div class="icons mt-5">
+
+            <img src="./img/icon-umberella.png" alt="umbrella">
+            <span>20%</span>
+            <img src="./img/icon-wind.png" alt="wind">
+            <span>18km/h</span>
+            <img src="./img/icon-compass.png" alt="compass">
+            <span>East</span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-12 col-lg-4 bg-black ">
+        <div class="header text-center bg-dark" id="">
+          <span>Sunday</span>
+        </div>
+        <div class="d-flex flex-column justify-content-between my-5 align-items-center">
+          <h3>32.5</h3>
+          <span>24</span> <span>sunny</span>
+        </div>
+      </div>
+
+        <div class="col-md-12 col-lg-4 bg-dark ">
+        <div class="header text-center bg-black" id="">
+          <span>Tuesday</span>
+        </div>
+        <div class="d-flex flex-column justify-content-between my-5 align-items-center">
+          <h3>32.5</h3>
+          <span>24</span> <span>sunny</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+
+
+
+  <!-- footer  -->
+  <footer class="container-fluid bg-dark py-5">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="d-flex flex-row w-75 w-md-50 rounded-5 bg-black text-white p-2">
+          <input type="text" class=" text-white bg-dark p-2 w-100 border-0 bg-opacity-10"
+            placeholder="Enter your email to subscribe ...." />
+          <button class="btn btn-info rounded-5 px-3">
+            Subscribe
+          </button>
+        </div>
+
+        <ul class="text-white d-flex list-unstyled m-0">
+          <li><i class="fa-brands fa-facebook-f"></i></li>
+          <li><i class="fa-brands fa-twitter"></i></li>
+          <li><i class="fa-brands fa-glide-g"></i></li>
+          <li><i class="fa-brands fa-pinterest-p"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="text-white container my-4">
+      Copyright 2014 Company name. Designed by Themezy. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="./js/bootstrap.bundle.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

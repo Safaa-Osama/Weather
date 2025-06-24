@@ -1,0 +1,50 @@
+
+body{
+    background-image: url(../img/لbg.jpg);
+    background-size: cover;
+    color: white;
+
+}
+nav.nav-bar{
+background-color: #1E202B important;
+
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+nav a i{
+color:#08A7DA;
+    
+}
+.navbar-nav {
+  gap: 30px;
+}
+.logo a .text span{
+    font-size: 10px;
+  
+} 
+
+
+
+footer ul li{
+    list-style: none;
+    margin: 5px;
+    padding: 15px;
+}
+
+footer ul li{
+    background-color: black;
+    border-radius: 50%;
+    color: #08A7DA;
+    transition: all .5s ease;
+
+    
+}
+footer ul li:hover{
+    background-color: #08A7DA;
+    color: white;
+}
+.weather{
+    height: 500px;
+}
