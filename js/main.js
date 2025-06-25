@@ -6,32 +6,44 @@ var findBtn = document.getElementById("findBtn");
 var searchLocation = '';
 
 async function getCurrentWeather(endPoint,city) {
-    var response = await fetch(`${baseUrl}${endPoint}?key=${APIKey}&q=${city}`);
+    var response = await fetch(`${baseUrl}${endPoint}?key=${APIKey}&q=${city}&days=3`);
     var cWeather = await response.json();
     console.log(cWeather);
     displayWeather(cWeather);
 }
 
-getCurrentWeather('current.json','cairo');
+getCurrentWeather('forecast.json','london');
 
 function displayWeather(curentWeather){
-    var weather = ``;
+  
+var lastUpdated = new Date(curentWeather['current'].last_updated);
+var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+var todayName = days[lastUpdated.getDay()];
+
+var months = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var dayOfMonth = lastUpdated.getDate();
+var monthName = months[lastUpdated.getMonth()];
+
+
+var weather = ``;
         weather = ` <div class="col-md-12 col-lg-4 bg-dark p-2">
 
         <div class="header d-flex justify-content-between bg-black" id="">
-          <span>${curentWeather['current'].last_updated}</span>
-          <span>${curentWeather['current'].last_updated}</span>
+          <span>${todayName}</span>
+          <span>${dayOfMonth}${monthName}</span>
         </div>
         <div id="location">
           <h5 class="my-3">${curentWeather['location'].name}</h5>
         </div>
         <div class="d-flex flex-column justify-content-center" id="tempreture">
-          <h1 class="my-3">34</h1>
-          <span>${curentWeather['current'].text}</span>
+          <h1 class="my-3">${curentWeather['current'].temp_c}C</h1>
+          <img src="${curentWeather.current.condition.icon}" class="sunny" alt="condition">
+
+          <span>${curentWeather['current'].condition.text}</span>
           <div class="icons mt-5">
 
             <img src="./img/icon-umberella.png" alt="umbrella">
-            <span>${curentWeather['current'].wind_mph}</span>
+            <span>20%</span>
             <img src="./img/icon-wind.png" alt="wind">
             <span>${curentWeather['current'].wind_kph}+kph</span>
             <img src="./img/icon-compass.png" alt="compass">
@@ -60,4 +72,8 @@ function displayWeather(curentWeather){
         </div>
       </div>`
     document.getElementById('rowData').innerHTML = weather;
+}
+
+function search(term){
+
 }

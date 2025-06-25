@@ -25,7 +25,9 @@ color:#08A7DA;
   
 } 
 
-
+.sunny{
+    width: 30px;
+}
 
 footer ul li{
     list-style: none;
